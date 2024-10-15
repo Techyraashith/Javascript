@@ -1,0 +1,14 @@
+<input id="box" type="text" onkeyup="Update()">
+<!-- <button onclick="Update()">Enter</button>-->
+
+<h1 id="result"></h1>
+<title>Dynamic Task 1</title>
+
+<script>
+    var Box = document.getElementById("box")
+    var result = document.getElementById("result")
+
+    function Update(){
+        result.textContent = Box.value
+    }   
+</script>

@@ -1,0 +1,15 @@
+<title>Dynamic Task 2</title>
+
+<button onclick="Update()">Click</button>
+<div id="result"></div>
+
+<script>
+    var div = document.getElementById("result")
+
+    function Update(){
+        /* creat new HTML element inside the script */
+        var element = document.createElement("h1")
+        element.textContent = "Hello"
+        div.append(element)
+    }
+</script>

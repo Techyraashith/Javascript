@@ -1,0 +1,16 @@
+<title>Dynamic Task 4</title>
+<h1 id="result">Name</h1>
+<button id="n1" onclick="Update(event)">Raashith</button>
+<button id="n2" onclick="Update(event)">Karthi</button>
+<button id="n3" onclick="Update(event)">Shanmugam</button>
+
+<script>
+    var h1 = document.getElementById("result")
+    var btn1 = document.getElementById("n1")
+    var btn2 = document.getElementById("n2")
+    var btn3 = document.getElementById("n3")
+
+    function Update(event){
+        h1.textContent = event.target.textContent 
+    }
+</script>
