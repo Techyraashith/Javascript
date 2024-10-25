@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+        <div>
+            <input id="input" type="text" placeholder="0" readonly>
+        </div>
+        <br>
+        <div>
+            <button onclick="Clear()">C</button>
+            <button onclick="Display('1')">1</button>
+            <button onclick="Display('2')">2</button>
+            <button onclick="Display('3')">3</button>
+            <br>
+            <button onclick="Display('4')">4</button>
+            <button onclick="Display('5')">5</button>
+            <button onclick="Display('6')">6</button>
+            <button onclick="Display('-')">-</button>
+            <br>
+            <button onclick="Display('7')">7</button>
+            <button onclick="Display('8')">8</button>
+            <button onclick="Display('9')">9</button>
+            <button onclick="Display('*')">*</button>
+            <br>
+            <button onclick="Display('0')">0</button>
+            <button onclick="Display('.')">.</button>
+            <button onclick="Display('/')">/</button>
+            <button onclick="Display('+')">+</button>
+            <br>
+            <button onclick="calculate()">=</button>
+            </div>
+
+    <script>
+        var result = document.getElementById("input")
+
+        function Display(value){
+            result.value += value 
+        }   
+
+        function calculate(){
+            result.value = eval(result.value)
+        }
+
+        function Clear(){
+            result.value = ""
+        }
+    </script>
+</body>
+</html>

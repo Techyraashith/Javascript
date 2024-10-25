@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Todo List</title>
+
+</head>
+<body class="p-3 bg-info">
+    <h2 class="mb-3 text-light">My Task Manager</h2>
+    <div class="input-group mb-3">
+        <input id="input" type="text" class="form-control" placeholder="Enter the Task...">
+        <div class="input-group-append">
+            <button class="btn btn-warning" onclick="add()">Add</button>
+        </div>
+    </div>
+
+
+    <ul id="list-container" class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            Hey There!
+            <button class="btn btn-danger text-dark btn-sm" onclick="del(event)">Delete</button>
+        </li>
+    </ul>
+
+
+    <script>
+        var ul = document.getElementById("list-container")
+        var task = document.getElementById("input") 
+        
+        function add(){
+            var list_item = document.createElement("li")
+            list_item.className = "list-group-item d-flex justify-content-between align-items-center"
+            list_item.innerHTML = task.value + "<button class='btn btn-danger text-dark btn-sm' onclick ='del(event)'>Delete</button>"
+            ul.append(list_item)
+        }
+
+        function del(event){
+            event.target.parentElement.remove()
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+<!-- This is The concept of the Todo List And go to is   -->
