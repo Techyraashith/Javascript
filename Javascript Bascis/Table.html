@@ -1,0 +1,29 @@
+<title>Table Generate</title>
+
+<h2>Table Start From : <input id="box1" type="number">
+<br><br>
+Table End To : <input id="box2" type="number">
+<br><br>
+<button onclick="generate()">Generate Table</button></h2>
+<div id="output"></div>
+
+<script>
+
+function generate()
+{
+    var start = document.getElementById("box1").value;
+    var end = document.getElementById("box2").value;
+
+    var result = document.getElementById("output");
+
+    for(let i = start; i<= end; i++)
+    {   
+        for(let j = 1; j<=10; j++)
+        {   var element = document.createElement("p")
+            var num = j * i ; 
+            element.innerHTML = j+"X"+i+"="+num; 
+            result.append(element);
+        }
+    }
+}
+</script>

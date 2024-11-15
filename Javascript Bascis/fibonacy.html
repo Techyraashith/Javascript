@@ -1,0 +1,25 @@
+<title>Fibonacy Sequence</title>
+<h2>Enter the range of fibonacy : <input id="input" type="number">
+<button onclick="generate()">Generate</button></h2>
+<div id="output"></div>
+
+<script>
+    function generate(){
+        var fibo = document.getElementById("input").value;
+        var n = 0;
+        var k = 0; 
+        var j = 1;
+
+        var result = document.getElementById("output")
+
+        for(let i = 0; i<fibo; i++)
+        {
+            element = document.createElement("p");
+            k = n;
+            n = j;
+            j = k + n;
+            element.innerHTML = k+"+"+n+"="+j;
+            result.append(element);
+        }
+    }
+</script>

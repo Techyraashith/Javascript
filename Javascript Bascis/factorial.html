@@ -1,0 +1,22 @@
+<title>Factorial</title>
+<h2>Enter the range of factorial : <input id="input" type="number">
+<button onclick="generate()">Generate</button></h2>
+<div id="output"></div>
+
+<script>
+    function generate()
+    {
+        var fact = 1;
+        var num = document.getElementById("input").value;
+
+        var result = document.getElementById("output");
+
+
+        for(let i = 1; i <= num; i++){
+            var element = document.createElement("p");
+            fact = fact * i;
+            element.innerHTML = fact;
+            result.append(element);
+        }
+    }
+</script>
