@@ -1,0 +1,35 @@
+<title>Find The Prime Number</title>
+<h2>
+    Enter the number to test : <input id="box1" type="number">
+    <button onclick="Prime()">Find</button>
+</h2>
+<div id="output"></div>
+
+<script>
+    function Prime(){
+        var num = document.getElementById("box1").value ;
+        var result = document.getElementById("output");
+
+        var prime = 1;
+        num = Number(num);
+
+        for(let i = 2; i < num; i++)
+        {
+            if(num % i == 0)
+            {
+                prime = 0;
+                break;
+            }
+        }
+
+            if(prime == 1)
+            {
+                result.innerHTML = num + " is prime number";
+            }
+
+            else
+            {
+                result.innerHTML = num + " is not prime number";
+            }
+    }
+</script>

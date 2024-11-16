@@ -1,0 +1,25 @@
+<title>Find The Number is ODD or EVEN</title>
+<h2>
+    Enter the number to test : <input id="box1" type="number">
+    <button onclick="find()">Find</button>
+</h2>
+<div id="output"></div>
+
+<script>
+   function find()
+   {
+    var num = document.getElementById("box1").value;
+    var result = document.getElementById("output");
+
+    num = Number(num);
+    if(num % 2 == 0){
+        result.innerHTML = num + " is Even Number.";
+    }
+
+    else{
+        result.innerHTML = num + " is Odd Number.";
+    }
+
+   }
+
+</script>
