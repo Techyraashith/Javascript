@@ -1,0 +1,19 @@
+<title>Print 1 to N number</title>
+<h2>
+    Enter the range to print : <input id="box1" type="number">
+    <button onclick="Print()">Generate</button>
+</h2>
+<div id="output"></div>
+
+<script>
+    function Print()
+    {
+        var n = document.getElementById("box1").value;
+        var result = document.getElementById("output");
+        for(let i = 0; i <= n; i++ ){
+            let element = document.createElement("div");
+            element.innerHTML = i;
+           result.append(element);
+        }
+    }
+</script>

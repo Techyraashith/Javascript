@@ -1,0 +1,20 @@
+<title>Sum Of N numbers</title>
+<h2>
+    Enter the range to sum : <input id="box1" type="number">
+    <button onclick="Print()">Generate</button>
+</h2>
+<div id="output"></div>
+
+<script>
+    function Print(){
+        var n = document.getElementById("box1").value 
+        var result = document.getElementById("output");
+        var sum = 0;
+        for(let i = 1; i <= n; i++){
+            var element = document.createElement("div");
+            sum = sum + i;
+            element.innerHTML = sum;
+            result.append(element);
+        }
+    }
+</script>

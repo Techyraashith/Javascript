@@ -11,8 +11,7 @@
         var result = document.getElementById("output");
 
         var prime = 1;
-        num = Number(num);
-
+        
         for(let i = 2; i < num; i++)
         {
             if(num % i == 0)
@@ -24,12 +23,12 @@
 
             if(prime == 1)
             {
-                result.innerHTML = num + " is prime number";
+                result.innerHTML = `${num} is prime number`;
             }
 
             else
             {
-                result.innerHTML = num + " is not prime number";
+                result.innerHTML = `${num} is not prime number`;
             }
     }
 </script>

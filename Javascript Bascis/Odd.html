@@ -1,0 +1,18 @@
+<title>Odd Numbers</title>
+<h2>
+    Enter the range : <input id="box1" type="number">
+    <button onclick="Print()">Generate</button>
+</h2>
+<div id="output"></div>
+
+<script>
+    function Print(){
+        var n = document.getElementById("box1").value 
+        var result = document.getElementById("output");
+        for(let i = 1; i <= n; i = i + 2){
+            var element = document.createElement("div");
+            element.innerHTML = i;
+            result.append(element);
+        }
+    }
+</script>
